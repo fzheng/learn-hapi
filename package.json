@@ -1,6 +1,6 @@
 {
   "name": "learn-hapi",
-  "version": "12.1.0",
+  "version": "0.1.0",
   "description": "Learn to build Web Applications & APIs using Hapi.js",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dwyl/learn-hapi.git"
+    "url": "git://github.com/fzheng/learn-hapi.git"
   },
   "keywords": [
     "hapi"
