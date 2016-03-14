@@ -1,7 +1,7 @@
 {
   "name": "learn-hapi",
   "version": "0.1.0",
-  "description": "Learn to build Web Applications & APIs using Hapi.js",
+  "description": "Hapi.js Test Only",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
