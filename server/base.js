@@ -2,7 +2,7 @@
 
 const theBcrypt = require('bcrypt');
 const Joi = require('joi');
-const path = require('path');
+const Boom = require('boom');
 
 // Base routes for default index/root path, about page, 404 error pages, and others..
 exports.register = function (server, options, next) {
@@ -35,6 +35,7 @@ exports.register = function (server, options, next) {
           name: Joi.string().max(40).min(2).alphanum()
         }
       },
+      cors: true,
       handler: function (request, reply) {
         reply('Hi ' + request.params.name + '!');
       }
@@ -51,6 +52,9 @@ exports.register = function (server, options, next) {
           name: Joi.string().max(40).min(2).alphanum()
         }
       },
+      cors: {
+        origin: ['*']
+      },
       handler: function (request, reply) {
         reply('Goodbye ' + request.params.name + '!');
       }
@@ -66,6 +70,9 @@ exports.register = function (server, options, next) {
         params: {
           id: Joi.string().max(40).min(2).alphanum()
         }
+      },
+      cors: {
+        origin: ['http://www.google.com']
       }
     },
     handler: function (request, reply) {

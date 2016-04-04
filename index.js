@@ -21,6 +21,12 @@ server.register([
     register: require('hapi-auth-basic')
   },
   {
+    register: require('crumb'),
+    options: {
+      restful: true
+    }
+  },
+  {
     register: require('hapi-auth-cookie')
   },
   {
@@ -38,13 +44,13 @@ server.register([
     register: require('./server/auth.js')
   },
   {
-   register: require('./server/base.js')
+    register: require('./server/base.js')
   },
   {
-   register: require('./server/bcrypt.js')
+    register: require('./server/bcrypt.js')
   },
   {
-   register: require('./server/inert.js')
+    register: require('./server/inert.js')
   }
 ], function (err) {
   if (err) {
@@ -53,12 +59,12 @@ server.register([
 });
 
 server.state('data', {
- ttl: null,
- isSecure: true,
- isHttpOnly: true,
- encoding: 'base64json',
- clearInvalid: false, // remove invalid cookies
- strictHeader: true // don't allow violations of RFC 6265
+  ttl: null,
+  isSecure: true,
+  isHttpOnly: true,
+  encoding: 'base64json',
+  clearInvalid: false, // remove invalid cookies
+  strictHeader: true // don't allow violations of RFC 6265
 });
 
 server.start(function () {

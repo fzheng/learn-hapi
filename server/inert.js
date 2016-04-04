@@ -2,6 +2,7 @@
 
 const theBcrypt = require('bcrypt');
 const Joi = require('joi');
+const Path = require('path');
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  inert cases >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 exports.register = function (server, options, next) {
@@ -40,6 +41,43 @@ exports.register = function (server, options, next) {
       }
     }
   });
+
+  server.route({
+    method: 'GET',
+    path: '/directory/{path*}',
+    handler: {
+      directory: {
+        path: './',
+        listing: true // negative 2
+      }
+    }
+  });
+
+  server.route([{
+    method: 'POST',
+    path: '/multiple/{path*}',
+    handler: {
+      directory: {
+        path: [
+          './',
+          '../'
+        ],
+        listing: true // negative case
+      }
+    }
+  }, {
+    method: 'GET',
+    path: '/test/{path*}',
+    config: {
+      handler: {
+        directory: {
+          path: Path.join('.', 'directory'),
+          index: false,
+          listing: false // good
+        }
+      }
+    }
+  }]);
 
   next();
 };
