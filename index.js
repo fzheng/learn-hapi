@@ -4,13 +4,24 @@ const Hapi = require('hapi');
 const Boom = require('boom');
 const Joi = require('joi');
 const theBcrypt = require('bcrypt');
+const myCrypto = require('crypto');
 const cryptiles = require('cryptiles');
-const port = 3000;
+const fs = require('fs');
+const port = require('config').get('/server/port');
 
 const server = new Hapi.Server();
+const tls = {
+  key: fs.readFileSync('/etc/mysslkeys/example.com/privatekey.pem'),
+  cert: fs.readFileSync('/etc/mysslkeys/example.com/certificate.pem')
+};
 server.app.key = 'secret_app_value_102';
 server.connection({
-  port: port
+  port: port,
+  tls: tls
+});
+
+server.connection({
+  port: 8080
 });
 
 server.register([
