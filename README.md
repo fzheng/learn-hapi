@@ -1,3 +1,4 @@
+
 ![Happiness Is...](http://i.imgur.com/Df5Z18T.jpg)
 
 [![Build Status](https://travis-ci.org/dwyl/learn-hapi.png?branch=master)](https://travis-ci.org/dwyl/learn-hapi)
