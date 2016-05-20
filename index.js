@@ -35,8 +35,8 @@ server.register([
     register: require('crumb'),
     options: {
       restful: true,
-      key: 'crumb',
-      size: 43
+      key: 'X-CSRF-Token',
+      size: 10
     }
   },
   {
