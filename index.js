@@ -36,7 +36,7 @@ server.register([
     options: {
       restful: true,
       key: 'crumb',
-      size: 10
+      size: 43
     }
   },
   {
