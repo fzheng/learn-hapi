@@ -1,11 +1,4 @@
-Revision: 1
-
-[![Build Status](https://travis-ci.org/dwyl/learn-hapi.png?branch=master)](https://travis-ci.org/dwyl/learn-hapi)
-[![codecov.io test coverage](https://codecov.io/github/dwyl/learn-hapi/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-hapi?branch=master)
-[![Code Climate](https://codeclimate.com/github/dwyl/learn-hapi.png)](https://codeclimate.com/github/dwyl/learn-hapi)
-[![Dependencies](https://david-dm.org/dwyl/learn-hapi.png?theme=shields.io)](https://david-dm.org/dwyl/learn-hapi)
-[![devDependency Status](https://david-dm.org/dwyl/learn-hapi/dev-status.svg)](https://david-dm.org/dwyl/learn-hapi#info=devDependencies)
-[![NPM Version][npm-image]][npm-url]
+Revision: 2
 
 # Learn Hapi [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-hapi/issues)
 
