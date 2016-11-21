@@ -1,4 +1,4 @@
-Revision: 8
+Revision: 9
 
 # Learn Hapi [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-hapi/issues)
 
